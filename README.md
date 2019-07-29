@@ -9,4 +9,4 @@ Front end: Angular 8; Back end: ASP.NET
     Docker is used for MAC only which provides a kind of VM.
     Kitematic is a desktop tool to create sqlserver.
     Azure Data Studio is a database system management app, which can login the server(with username and password from Kitematic)
-    
+  (2) 

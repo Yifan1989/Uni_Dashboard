@@ -12,3 +12,7 @@ Front end: Angular 8; Back end: ASP.NET
   (2) connectionstrings in appsettings.json file, providing database name and password
   (3) ApplicationDbContext.cs file is a class used to communicates with the database
       in the startup.cs file, we added the service, which is used to communicates with the database, and the connection string is "DefaultConnection" in the appsettings.json file
+  (4) Use EF Migrations to build a db in Azure
+    (a) cd Uni_Dash and """ dotnet ef migrations add InitialCreate """
+    (b) then there will be a folder called Migrations and the first cs file is used to build the db, the tables
+    (c) execute it. still the same cd, and """dotnet ef database update InitialCreate""", now we can find them in Azure

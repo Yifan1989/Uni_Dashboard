@@ -4,6 +4,7 @@ Full stack project.
 Front end: Angular 8; Back end: ASP.NET
 
 1. sql server
+
   (1) install Docker, Kitematic and Azure Data Studio
     Docker is running, Kitematic is running and use Azure Data Studio to manage the database.
     Docker is used for MAC only which provides a kind of VM.
@@ -16,8 +17,11 @@ Front end: Angular 8; Back end: ASP.NET
       in the startup.cs file, we added the service, which is used to communicates with the database, and the connection string is "DefaultConnection" in the appsettings.json file
 
   (4) Use EF Migrations to build a db in Azure
+
     (a) cd Uni_Dash and """ dotnet ef migrations add InitialCreate """
+
     (b) then there will be a folder called Migrations and the first cs file is used to build the db, the tables
-    (c) execute it. still the same cd, and """dotnet ef database update InitialCreate""", now we can find them in Azure
     
+    (c) execute it. still the same cd, and """dotnet ef database update InitialCreate""", now we can find them in Azure
+
   (5) add a file named EmployeeController.cs. It works for changing the database. see comments in the file

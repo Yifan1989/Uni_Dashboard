@@ -16,3 +16,4 @@ Front end: Angular 8; Back end: ASP.NET
     (a) cd Uni_Dash and """ dotnet ef migrations add InitialCreate """
     (b) then there will be a folder called Migrations and the first cs file is used to build the db, the tables
     (c) execute it. still the same cd, and """dotnet ef database update InitialCreate""", now we can find them in Azure
+  (5) add a file named EmployeeController.cs. It works for changing the database. see comments in the file

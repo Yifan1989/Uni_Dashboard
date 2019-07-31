@@ -25,3 +25,10 @@ Front end: Angular 8; Back end: ASP.NET
     (c) execute it. still the same cd, and """dotnet ef database update InitialCreate""", now we can find them in Azure
 
   (5) add a file named EmployeeController.cs. It works for changing the database. see comments in the file
+
+  (6) finally we test it by using postman
+    (a) when put and delete, we need the employee id.
+
+    (b) all the rest is just simple.
+
+2. Front-end now:

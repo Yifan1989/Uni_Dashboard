@@ -24,6 +24,8 @@ Front end: Angular 8; Back end: ASP.NET
 
     (c) execute it. still the same cd, and """dotnet ef database update InitialCreate""", now we can find them in Azure
 
+    (d) If a new table needed, we have to go through from (a) to (c). After that, a new table would be found in Azure
+
   (5) add a file named EmployeeController.cs. It works for changing the database. see comments in the file
 
   (6) finally we test it by using the postman

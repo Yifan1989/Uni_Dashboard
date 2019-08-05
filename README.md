@@ -35,3 +35,7 @@ Front end: Angular 8; Back end: ASP.NET
     (b) all the rest is just simple(get, post).
 
 2. Front-end now:
+
+  (1) build a simple front end with two inputs and one button
+
+      Tip: dont forget to import "ReactiveFormsModule" in the app.module.ts file!

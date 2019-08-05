@@ -21,28 +21,12 @@ namespace Uni_Dash.Migrations
                 {
                     table.PrimaryKey("PK_Employees", x => x.id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Logins",
-                columns: table => new
-                {
-                    user = table.Column<string>(nullable: false)
-                          .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    passwd = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Logins", x => x.user);
-                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Employees");
-
-            migrationBuilder.DropTable(
-                name: "Logins");
         }
     }
 }

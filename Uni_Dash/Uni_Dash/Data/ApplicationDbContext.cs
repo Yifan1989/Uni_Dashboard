@@ -14,5 +14,6 @@ namespace Uni_Dash.Data
         //DbSet properties of the DbContext. The DbSet represents a collection
         //of entities of a specific type - the type specified by the type parameter.
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Login> Logins { get; set; }
     }
 }

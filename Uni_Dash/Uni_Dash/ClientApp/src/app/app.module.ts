@@ -1,7 +1,10 @@
 ﻿import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+//this is we use to post from angular to asp.net
 import { HttpClientModule } from '@angular/common/http';
+
 import { RouterModule } from '@angular/router';
 
 

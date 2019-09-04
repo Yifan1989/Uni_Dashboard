@@ -2,6 +2,8 @@
 import { Validators, FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
+//authentication and authorization in angular
+
 
 @Component({
   selector: 'app-home',

@@ -8,19 +8,22 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit{
+  
   postData = {
       user: "",
       passwd: ""
-  }
+  };
 
   url = 'https://localhost:5001/api/login';
+  login: any[] = [];
+
 
   userForm : FormGroup;
   constructor(private fb: FormBuilder, private http: HttpClient) {
     
   }
 
- 
+  
   
   ngOnInit(): void{
     this.userForm = this.fb.group({
@@ -38,6 +41,19 @@ export class HomeComponent implements OnInit{
         this.http.post(this.url, this.postData).toPromise().then(data => {
             console.log(data);
         });
-        
+
+        /*
+        this.http.get(this.url).subscribe(data => {
+            this.login = data as string[];
+        })
+
+        //console.log("login", this.login);
+        console.log(1);
+        console.log(this.login.length);
+        for (let i = 0; i < this.login.length; i++) {
+            console.log(this.login[i]);
+        }
+        console.log(2);
+        */
     }
 }

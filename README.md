@@ -43,3 +43,7 @@ Front end: Angular 8; Back end: ASP.NET
   (1) build a simple front end with two inputs and one button
 
       Tip: dont forget to import "ReactiveFormsModule" in the app.module.ts file!
+
+  (2) done.
+
+3. simple test: post username and passwd from Angular input to db through asp.net api

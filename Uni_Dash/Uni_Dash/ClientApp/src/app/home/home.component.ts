@@ -9,17 +9,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit{
   postData = {
-      user: "new user",
-      passwd: "111111"
+      user: "",
+      passwd: ""
   }
 
   url = 'https://localhost:5001/api/login';
 
   userForm : FormGroup;
   constructor(private fb: FormBuilder, private http: HttpClient) {
-      this.http.post(this.url, this.postData).toPromise().then(data => {
-          console.log(data);
-      });
+    
   }
 
  
@@ -34,6 +32,12 @@ export class HomeComponent implements OnInit{
     test() {
         console.log(this.userForm.value);
 
+        this.postData.user = this.userForm.value.user;
+        this.postData.passwd = this.userForm.value.passwd;
 
+        this.http.post(this.url, this.postData).toPromise().then(data => {
+            console.log(data);
+        });
+        
     }
 }

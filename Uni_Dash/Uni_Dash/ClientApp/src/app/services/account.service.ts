@@ -22,7 +22,8 @@ export class AccountService {
 
 
     login(user:string, passwd:string) {
-        return this.http.post<any>(this.baseUrlLogin, { user, passwd }).pipe();
+        return this.http.post<any>(this.baseUrlLogin, { user, passwd }).pipe(
+        );
     }
 
 

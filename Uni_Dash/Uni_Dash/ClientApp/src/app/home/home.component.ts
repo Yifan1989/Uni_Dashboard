@@ -49,6 +49,10 @@ export class HomeComponent implements OnInit{
         this.postData.user = this.userForm.value.user;
         this.postData.passwd = this.userForm.value.passwd;
 
+        //json ob(user, passwd) passed to the controller in api
+        // the table adds the details
+
+
 
         /*
         this.http.post(this.url, this.postData).toPromise().then(data => {

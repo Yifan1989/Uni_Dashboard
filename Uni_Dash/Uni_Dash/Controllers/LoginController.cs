@@ -31,6 +31,8 @@ namespace Uni_Dash.Controllers
             {
                 return new JsonResult("Error While Creating New Login");
             }
+
+            // this Logins is the table name in db
             _db.Logins.Add(objLogin);
             // saves all the changes to the database
             await _db.SaveChangesAsync();

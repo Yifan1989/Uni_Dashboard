@@ -14,7 +14,7 @@ export class AccountService {
 
     constructor(private http : HttpClient) { }
 
-    private baseUrlLogin: string = '/api/Login';
+    private baseUrlLogin: string = 'https://localhost:5001/api/Login';
 
     private Loginstatus = new BehaviorSubject<boolean>(this.checkLoginStatus());
     private user = new BehaviorSubject<string>(localStorage.getItem("user"));
@@ -22,7 +22,7 @@ export class AccountService {
 
 
     login(user:string, passwd:string) {
-
+        return this.http.post<any>(this.baseUrlLogin, { user, passwd }).pipe();
     }
 
 

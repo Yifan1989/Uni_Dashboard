@@ -36,11 +36,6 @@ export class HomeComponent implements OnInit{
       user: [""], //initilize ob not using =
       passwd: [""],
     });
-
-
-
-
-    
   }
 
 

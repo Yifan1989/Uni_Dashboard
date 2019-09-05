@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-
+import { AccountService } from '../services/account.service';
 //authentication and authorization in angular
 
 
@@ -15,13 +15,17 @@ export class HomeComponent implements OnInit{
       user: "",
       passwd: ""
   };
+  
+  private loginStatusGet: boolean;
+
+
 
   url = 'https://localhost:5001/api/login';
   login: any[] = [];
 
 
   userForm : FormGroup;
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private acct : AccountService) {
     
   }
 
@@ -32,7 +36,17 @@ export class HomeComponent implements OnInit{
       user: [""], //initilize ob not using =
       passwd: [""],
     });
+
+
+
+
+    
   }
+
+
+
+
+
 
     test() {
         console.log(this.userForm.value);
@@ -40,9 +54,12 @@ export class HomeComponent implements OnInit{
         this.postData.user = this.userForm.value.user;
         this.postData.passwd = this.userForm.value.passwd;
 
+
+        /*
         this.http.post(this.url, this.postData).toPromise().then(data => {
             console.log(data);
         });
+        */
 
         /*
         this.http.get(this.url).subscribe(data => {

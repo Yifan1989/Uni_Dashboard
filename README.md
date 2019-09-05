@@ -47,3 +47,5 @@ Front end: Angular 8; Back end: ASP.NET
   (2) done.
 
 3. simple test: post username and passwd from Angular input to db through asp.net api
+
+4. To do the authentication and authorization service in angular. put localstorage and db together

@@ -1,7 +1,7 @@
 ﻿import { Injectable } from '@angular/core';
 import { HttpClient } from '../../../node_modules/@angular/common/http';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
-
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -23,6 +23,7 @@ export class AccountService {
 
     login(user:string, passwd:string) {
         return this.http.post<any>(this.baseUrlLogin, { user, passwd }).pipe(
+            
         );
     }
 

@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit{
     this.userForm = this.fb.group({
       user: [""], //initilize ob not using =
       passwd: [""],
+      role: [""],
     });
   }
 

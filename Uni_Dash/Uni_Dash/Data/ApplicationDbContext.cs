@@ -15,5 +15,6 @@ namespace Uni_Dash.Data
         //of entities of a specific type - the type specified by the type parameter.
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Login> Logins { get; set; }
+        public DbSet<LoginHash> LoginHashs { get; set; }
     }
 }
